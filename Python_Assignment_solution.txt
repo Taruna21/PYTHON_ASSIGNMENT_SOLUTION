@@ -1,0 +1,56 @@
+'''Task 1: Calculate Area with Conditions
+Write a Python function calculate_area that takes two parameters: length and width. It 
+should calculate and return the area of a rectangle. However, add a condition: if the length 
+is equal to the width, return "This is a square!" instead of the area. Then, write a program to 
+input values for length and width from the user and call the calculate_area function to 
+display either the area or the message.'''
+
+def calculate_area(length , width):
+    rectangle = length * width
+    if length == width:
+        return "This is a square"
+    return rectangle
+
+length = int(input("enter the value of length :")) 
+width = int(input("enter the value of width :"))  
+calculate_area(length , width)
+
+enter the value of length : 7
+enter the value of width : 6
+42 #output
+
+length = int(input("enter the value of length :")) 
+width = int(input("enter the value of width :"))  
+​calculate_area(length , width)
+
+enter the value of length : 6
+enter the value of width : 6
+'This is a square'  #output
+
+'''Task 2: Generate Fibonacci Series
+Problem Statement:
+Write a Python program that generates the Fibonacci sequence up to a specified number of 
+terms, n. The Fibonacci sequence starts with 0 and 1, and each subsequent number in the 
+sequence is the sum of the two preceding numbers (e.g., 0, 1, 1, 2, 3, 5, 8, ...). Prompt the 
+user to enter the number of terms (n) they want in the sequence and then display the 
+Fibonacci sequence up to that number of terms'''
+
+def fibonacci_series(n):
+    if n <= 0:
+        return []
+    elif n == 1:
+        return [0]
+    elif n == 2:
+        return [0, 1]
+    else:
+        fib_series = fibonacci_series(n - 1)
+        fib_series.append(fib_series[-1] + fib_series[-2])
+        return fib_series
+
+n = int(input("Enter the number of Fibonacci numbers you want: "))  
+result = fibonacci_series(n)
+print(result)
+
+Enter the number of Fibonacci numbers you want:  10
+[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]  #output
+
