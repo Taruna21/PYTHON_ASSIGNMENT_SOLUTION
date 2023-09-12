@@ -6,10 +6,10 @@ input values for length and width from the user and call the calculate_area func
 display either the area or the message.'''
 
 def calculate_area(length , width):
-    rectangle = length * width
+    rectangle = length * width    #area_of_rectangle
     if length == width:
         return "This is a square"
-    return rectangle
+    return rectangle                 
 
 length = int(input("enter the value of length :")) 
 width = int(input("enter the value of width :"))  
